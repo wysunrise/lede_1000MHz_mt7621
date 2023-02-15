@@ -1,0 +1,20 @@
+name: lede
+
+on:
+  workflow_dispatch:
+
+jobs:
+  repo-sync:
+    name: Repo Sync
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+    - uses: actions/checkout@v3
+    - uses: repo-sync/github-sync@master
+      name: Sync repo to branch
+      with:
+        source_repo: "https://github.com/coolsnowwolf/lede"
+        source_branch: "master"
+        destination_branch: "lede"
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+    

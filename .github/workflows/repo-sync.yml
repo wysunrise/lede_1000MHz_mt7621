@@ -6,7 +6,7 @@ on:
 jobs:
   repo-sync:
     name: Repo Sync
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     if: github.event.repository.owner.id == github.event.sender.id
     steps:
     - uses: actions/checkout@v3
@@ -16,5 +16,5 @@ jobs:
         source_repo: "https://github.com/coolsnowwolf/lede"
         source_branch: "master"
         destination_branch: "lede"
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.PAT }}
     

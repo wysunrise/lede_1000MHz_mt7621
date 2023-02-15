@@ -16,5 +16,5 @@ jobs:
         source_repo: "https://github.com/coolsnowwolf/lede"
         source_branch: "master"
         destination_branch: "lede"
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+#         github_token: ${{ secrets.GITHUB_TOKEN }}
     

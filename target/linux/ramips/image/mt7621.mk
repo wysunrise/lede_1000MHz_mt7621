@@ -1811,8 +1811,7 @@ define Device/xiaomi_redmi-router-ac2100
   $(Device/xiaomi_nand_separate)
   DEVICE_MODEL := Redmi Router AC2100
   IMAGE_SIZE := 120320k
-  DEVICE_PACKAGES += kmod-mt7603e kmod-mt7615d luci-app-mtwifi \
-	-wpad-openssl
+  DEVICE_PACKAGES += kmod-mt7603 kmod-mt7615e kmod-mt7615e-firmware
 endef
 TARGET_DEVICES += xiaomi_redmi-router-ac2100
 
